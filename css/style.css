@@ -103,8 +103,18 @@ span {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  .Player1 {
+    transition: ease-in-out 0.5s;
+    position: absolute;
+    left: -300px;
+  }
+  .IA1 {
+    position: absolute;
+    transition: ease-in-out 0.5s;
+
   img {
     width: 30%;
+  }
   }
   /* .Player1 {
     transition: all ease-in-out 3s;
@@ -120,7 +130,13 @@ span {
     right: -300px;
     opacity: 0;
   } */
-}
+/* 
+@keyframes Player {
+  from {
+  }
+  to {
+  }
+
 #imageTransitionPlayer {
   transition: all ease-in-out 1s;
   left: 0;
