@@ -68,13 +68,17 @@ main {
   padding: 20px;
   gap: 10px;
   img {
-    cursor: pointer;
-    height: 30%;
-    flex: 1;
     border: 1px solid black;
+    height: 30%;
     border-radius: 20px;
+    transition: ease-in-out 0.5s;
+    flex: 1;
     &:hover {
-      border: 1px solid red;
+      border: 1px solid white;
+      /* transform: translate(2px); */
+      /* transform: translateY(2px); */
+      transform: scale(0.7);
+      transition: ease-in-out 0.5s;
     }
   }
 }
@@ -86,10 +90,42 @@ main {
 }
 .Game {
   flex: 1;
-  width: 70%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   border: 1px solid black;
-  background-image: url(../asset/img/Looser.png);
+  /* background-image: url(/asset/img/Looser.png); */
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  .Player1 {
+    transition: ease-in-out 0.5s;
+    position: absolute;
+    left: -300px;
+    /* visibility: hidden; */
+  }
+  .IA1 {
+    position: absolute;
+    transition: ease-in-out 0.5s;
+    /* visibility: hidden; */
+    right: -300px;
+  }
 }
+/* 
+@keyframes Player {
+  from {
+  }
+  to {
+  }
+}
+
+@keyframes IA {
+  from {
+    right: -300px;
+  }
+  to {
+    transform: translateX(-450px);
+  }
+} */
