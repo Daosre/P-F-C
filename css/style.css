@@ -46,6 +46,7 @@ main {
   width: 90%;
   padding: 20px;
 }
+
 .Score {
   display: flex;
   flex-direction: column;
@@ -57,6 +58,9 @@ main {
   background-color: rgba(255, 255, 255, 0.4);
   width: 20%;
   border-radius: 20px;
+}
+span {
+  text-align: center;
 }
 .Player,
 .IA {
@@ -93,10 +97,9 @@ main {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 100px;
   border: 1px solid black;
-  /* background-image: url(/asset/img/Looser.png); */
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -108,25 +111,40 @@ main {
   .IA1 {
     position: absolute;
     transition: ease-in-out 0.5s;
-    right: -300px;
+
+  img {
+    width: 30%;
   }
-}
-.visibility {
-  visibility: visible;
-}
+  }
+  /* .Player1 {
+    transition: all ease-in-out 3s;
+    /* position: absolute; */
+  /* left: -300px; */
+
+  /* opacity: 0;
+    z-index: -1;
+  }
+  .IA1 {
+    position: absolute;
+    transition: all ease-in-out 5s;
+    right: -300px;
+    opacity: 0;
+  } */
 /* 
 @keyframes Player {
   from {
   }
   to {
   }
-}
 
-@keyframes IA {
-  from {
-    right: -300px;
-  }
-  to {
-    transform: translateX(-450px);
-  }
-} */
+#imageTransitionPlayer {
+  transition: all ease-in-out 1s;
+  left: 0;
+  opacity: 1;
+  z-index: 0;
+}
+#imageTransitionIA {
+  transition: all ease-in-out 1s;
+  right: 0;
+  opacity: 1;
+}

@@ -1,10 +1,39 @@
+const choicePlayerImage = document.querySelector(".Player1");
+const choiceIAImage = document.querySelector(".IA1");
+const buttonPapperPlayer = document.querySelector("#papper");
+const buttonCissorPlayer = document.querySelector("#cissor");
+const buttonRockPlayer = document.querySelector("#rock");
+const messageGame = document.querySelector(".messageGame");
+const scoreGame = document.querySelector(".scoreGame");
+
+function gameChange(string) {
+  choicePlayerImage.src = `./asset/img/${string}.png`;
+  choicePlayer = string;
+  let resultat = result();
+  messageGame.innerHTML = resultat;
+  choiceIAImage.src = `./asset/img/${choiceIA}.png`;
+  scoreGameChange();
+}
+buttonPapperPlayer.addEventListener("click", () => {
+  gameChange(choice.paper);
+  //   choicePlayerImage.id = "imageTransitionPlayer";
+});
+buttonCissorPlayer.addEventListener("click", () => {
+  gameChange(choice.cissor);
+  //   choicePlayerImage.id = "imageTransitionPlayer";
+});
+buttonRockPlayer.addEventListener("click", () => {
+  gameChange(choice.rock);
+  //   choicePlayerImage.id = "imageTransitionPlayer";
+});
+
 let scorePlayer = 0;
 let scoreIA = 0;
 let choicePlayer;
 let choiceIA;
 const choice = {
   rock: "Rock",
-  paper: "Paper",
+  paper: "Papper",
   cissor: "Cissor",
   well: "WELL",
 };
@@ -28,7 +57,10 @@ function featureWell() {
   let randomNumber = Math.floor(Math.random() * (4 - 0) + 0);
   return rockPaperCissor(randomNumber);
 }
-choicePlayer = choice.paper;
+
+function scoreGameChange() {
+  scoreGame.innerHTML = `${scorePlayer} - ${scoreIA}`;
+}
 
 function result() {
   if (scoreIA + scorePlayer <= 4) {
@@ -38,6 +70,7 @@ function result() {
   }
   switch (true) {
     case choiceIA === choicePlayer:
+      console.log(choiceIA, "ia", choicePlayer, "player");
       return "Equality";
     case (choiceIA === choice.rock && choicePlayer === choice.paper) ||
       (choiceIA === choice.paper && choicePlayer === choice.cissor) ||
@@ -53,9 +86,11 @@ function result() {
       (choiceIA === choice.cissor && choicePlayer === choice.paper) ||
       (choiceIA === choice.rock && choicePlayer === choice.cissor):
       scoreIA++;
+      console.log(choiceIA, "ia", choicePlayer, "player");
       return "IA win !";
     case choiceIA === choice.well:
       scoreIA = 999;
+      console.log(choiceIA, "ia", choicePlayer, "player");
       return "IA DESTROY HUMANITY";
     default:
       return "Error";
