@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/asset/img/Wallpaper.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.title {
+  border-radius: 20px;
+  width: 50%;
+  height: 150px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 10px;
+  font-size: 42px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  h2 {
+    filter: drop-shadow(2px 2px black);
+  }
+}
+main {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 90%;
+  padding: 20px;
+}
+.Score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 20%;
+  border-radius: 20px;
+}
+.Player,
+.IA {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  padding: 10px;
+  gap: 10px;
+  img {
+    width: 50%;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 20px;
+    flex: 1;
+  }
+}
+.Player {
+  border-radius: 20px 0 0 20px;
+}
+.IA {
+  border-radius: 0 20px 20px 0;
+}
+.Game {
+  width: 70%;
+  border: 1px solid black;
+  background-image: url(/asset/img/Looser.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
