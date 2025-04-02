@@ -12,7 +12,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-image: url("/asset/img/Wallpaper.webp");
+  background-image: url("../asset/img/Wallpaper.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -64,15 +64,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
-  padding: 10px;
+  height: 100%;
+  padding: 20px;
   gap: 10px;
   img {
-    width: 50%;
-    object-fit: cover;
+    cursor: pointer;
+    height: 30%;
+    flex: 1;
     border: 1px solid black;
     border-radius: 20px;
-    flex: 1;
+    &:hover {
+      border: 1px solid red;
+    }
   }
 }
 .Player {
@@ -82,9 +85,11 @@ main {
   border-radius: 0 20px 20px 0;
 }
 .Game {
+  flex: 1;
   width: 70%;
   border: 1px solid black;
-  background-image: url(/asset/img/Looser.png);
-  background-size: cover;
+  background-image: url(../asset/img/Looser.png);
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
