@@ -104,14 +104,15 @@ main {
     transition: ease-in-out 0.5s;
     position: absolute;
     left: -300px;
-    /* visibility: hidden; */
   }
   .IA1 {
     position: absolute;
     transition: ease-in-out 0.5s;
-    /* visibility: hidden; */
     right: -300px;
   }
+}
+.visibility {
+  visibility: visible;
 }
 /* 
 @keyframes Player {
