@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Paper Rock Cissor</title>
   </head>
   <body>
@@ -13,16 +13,20 @@
       <h2>Cissor</h2>
     </section>
     <section class="Score">
-      <p>Score</p>
-      <span>0 - 0</span>
+      <h3>Score</h3>
+      <span class="scoreGame">0 - 0</span>
+      <span class="messageGame"></span>
     </section>
     <main>
       <section class="Player">
-        <img src="./asset/img/Cissor.png" alt="" />
-        <img src="./asset/img/papper.png" alt="" />
-        <img src="./asset/img/Rock.png" alt="" />
+        <img src="./asset/img/Cissor.png" alt="" id="cissor" />
+        <img src="./asset/img/papper.png" alt="" id="papper" />
+        <img src="./asset/img/Rock.png" alt="" id="rock" />
       </section>
-      <section class="Game"></section>
+      <section class="Game">
+        <img src="./asset/img/Cissor.png" alt="" class="Player1" />
+        <img src="./asset/img/papper.png" alt="" class="IA1" />
+      </section>
       <section class="IA">
         <img src="./asset/img/Cissor.png" alt="" />
         <img src="./asset/img/papper.png" alt="" />

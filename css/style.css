@@ -12,7 +12,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-image: url("/asset/img/Wallpaper.webp");
+  background-image: url("../asset/img/Wallpaper.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -46,6 +46,7 @@ main {
   width: 90%;
   padding: 20px;
 }
+
 .Score {
   display: flex;
   flex-direction: column;
@@ -58,21 +59,31 @@ main {
   width: 20%;
   border-radius: 20px;
 }
+span {
+  text-align: center;
+}
 .Player,
 .IA {
   border: 2px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
-  padding: 10px;
+  height: 100%;
+  padding: 20px;
   gap: 10px;
   img {
-    width: 50%;
-    object-fit: cover;
     border: 1px solid black;
+    height: 30%;
     border-radius: 20px;
+    transition: ease-in-out 0.5s;
     flex: 1;
+    &:hover {
+      border: 1px solid white;
+      /* transform: translate(2px); */
+      /* transform: translateY(2px); */
+      transform: scale(0.7);
+      transition: ease-in-out 0.5s;
+    }
   }
 }
 .Player {
@@ -82,9 +93,42 @@ main {
   border-radius: 0 20px 20px 0;
 }
 .Game {
-  width: 70%;
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
   border: 1px solid black;
-  background-image: url(/asset/img/Looser.png);
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
+  img {
+    width: 30%;
+  }
+  /* .Player1 {
+    transition: all ease-in-out 3s;
+    /* position: absolute; */
+  /* left: -300px; */
+
+  /* opacity: 0;
+    z-index: -1;
+  }
+  .IA1 {
+    position: absolute;
+    transition: all ease-in-out 5s;
+    right: -300px;
+    opacity: 0;
+  } */
+}
+#imageTransitionPlayer {
+  transition: all ease-in-out 1s;
+  left: 0;
+  opacity: 1;
+  z-index: 0;
+}
+#imageTransitionIA {
+  transition: all ease-in-out 1s;
+  right: 0;
+  opacity: 1;
 }
