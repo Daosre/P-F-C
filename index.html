@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Paper Rock Cissor</title>
   </head>
   <body>
-    <p>Ceci est la branche DEV</p>
+    <section class="title">
+      <h2>Rock</h2>
+      <h2>Papper</h2>
+      <h2>Cissor</h2>
+    </section>
+    <section class="Score">
+      <h3>Score</h3>
+      <span class="scoreGame">0 - 0</span>
+      <span class="messageGame"></span>
+    </section>
+    <main>
+      <section class="Player">
+        <img src="./asset/img/Cissor.png" alt="" id="cissor" />
+        <img src="./asset/img/papper.png" alt="" id="papper" />
+        <img src="./asset/img/Rock.png" alt="" id="rock" />
+      </section>
+      <section class="Game">
+        <img src="./asset/img/Cissor.png" alt="" class="Player1" />
+        <img src="./asset/img/papper.png" alt="" class="IA1" />
+      </section>
+      <section class="IA">
+        <img src="./asset/img/Cissor.png" alt="" />
+        <img src="./asset/img/papper.png" alt="" />
+        <img src="./asset/img/Rock.png" alt="" />
+      </section>
+    </main>
   </body>
+  <script src="script/pfc.js"></script>
 </html>
